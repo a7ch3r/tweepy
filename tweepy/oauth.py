@@ -307,7 +307,7 @@ class OAuthRequest(object):
         defaults = {
             'oauth_consumer_key': oauth_consumer.key,
             'oauth_timestamp': generate_timestamp(),
-            'oauth_nonce': generate_nonce(),
+            'oauth_nonce': generate_nonce(32),
             'oauth_version': OAuthRequest.version,
         }
 
